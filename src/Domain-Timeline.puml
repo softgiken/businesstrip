@@ -1,0 +1,15 @@
+@startuml
+class TotalFeeA {
+    List<TeeA>
+    sum()
+}
+
+class FeeA {
+    CheckoutTime
+    Date
+    Capacity
+    sum()
+}
+
+TotalFeeA o--> FeeA
+@enduml
