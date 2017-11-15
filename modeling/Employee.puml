@@ -1,0 +1,40 @@
+@startuml
+class Employee {
+    id : Integer
+    Name
+    Capacity
+    Commute
+}
+
+class Name {
+    name: String
+}
+
+class Capacity {
+    cap: Integer
+}
+
+class Address {
+    location: Location
+    commute: Commute
+}
+
+class Commute {
+    minute: Integer
+}
+
+class Location {
+}
+
+
+Name ..> Employee
+Capacity ..> Employee
+Address ..> Employee
+Commute ..> Address
+Location ..> Address
+
+note top of Employee : 従業員
+note top of Capacity : 資格
+note top of Commute : 通勤時間
+
+@enduml

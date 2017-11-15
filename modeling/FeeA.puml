@@ -1,0 +1,67 @@
+@startuml
+
+interface Trip {
+ calcFee
+}
+
+class OneDayTrip {
+    calcFee()
+}
+
+class StayOverTrip {
+    calcFee()
+}
+
+class Employee {
+}
+
+class Departure {
+    Calender
+    Location
+    continuation: bool
+}
+class Arrival {
+    Calender
+    Location
+}
+
+class MovingDistance {
+    kilometer : int
+}
+
+interface TimeOfPayment {
+}
+class StartTimeOfPayment {
+    Calender
+    Commute
+    isHome
+}
+class EndTimeOfPayment {
+    Calender
+    Commute
+    isHome
+}
+class PaymentTime {
+    StartTimeOfPayment
+    EndTimeOfPayment
+}
+
+OneDayTrip --|> Trip
+StayOverTrip -down-|> Trip
+
+StartTimeOfPayment --|> TimeOfPayment
+EndTimeOfPayment --|> TimeOfPayment
+
+
+StartTimeOfPayment ..> PaymentTime
+EndTimeOfPayment ..> PaymentTime
+
+Departure ..> OneDayTrip
+Arrival ..> OneDayTrip
+
+Employee ..> OneDayTrip
+MovingDistance ..> OneDayTrip
+
+PaymentTime ..> OneDayTrip
+
+@enduml

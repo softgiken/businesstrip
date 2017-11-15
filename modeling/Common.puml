@@ -1,0 +1,17 @@
+@startuml
+class Calender {
+    dateTime
+    isSameDay()
+    isBusinessDay()
+}
+
+class Location {
+    name
+    address
+}
+
+class Fee {
+    amount
+}
+
+@enduml
