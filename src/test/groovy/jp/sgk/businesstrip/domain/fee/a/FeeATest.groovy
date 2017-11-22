@@ -11,16 +11,16 @@ import jp.sgk.businesstrip.domain.fee.a.trip.OneDayTrip
 
 import java.time.LocalDateTime
 
-class FeeATest extends spock.lang.Specification {
-    def "日帰り"() {
-        setup:
-        def employee = new Employee(new Name("suzuki"), Capacity.J, new Address(new Location("私ん家", ""), new Commute(30)) )
+        class FeeATest extends spock.lang.Specification {
+            def "日帰り"() {
+                setup:
+                def employee = new Employee(new Name("suzuki"), Capacity.J, new Address(new Location("私ん家", ""), new Commute(30)) )
 
-        def departure = new Departure(
-                new Calender(LocalDateTime.parse("2017-12-03T07:15:30")),
-                new Location("仙台事業所", "仙台市青葉区本町"),
-                false
-        )
+                def departure = new Departure(
+                        new Calender(LocalDateTime.parse("2017-12-03T07:15:30")),
+                        new Location("仙台事業所", "仙台市青葉区本町"),
+                        false
+                )
 
         def arrival = new Arrival(
                 new Calender(LocalDateTime.parse("2017-12-03T18:20:05")),

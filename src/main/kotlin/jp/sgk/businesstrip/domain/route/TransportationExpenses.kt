@@ -1,6 +1,5 @@
 package jp.sgk.businesstrip.domain.route
 
-class TransportationExpenses(){
-    //計算結果
-    //でも今回は手入力を想定しているため、ただ値を取得するだけ？
-}
+class TransportationExpenses(val money: Int)
+    //入力された交通費の値を格納
+//ここもう少しユーザー側の負担を減らせないか考える
